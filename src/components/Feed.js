@@ -24,7 +24,7 @@ function Feed(){
 
                                                 </div>
                                                 <div className="pull-right icon-Section">
-                                                            <span className="i_tag i_button"><button type="button" className="btn btn-light hashtag-Button"> <i className=" mdi mdi-link" aria-hidden="true"></i> <span>Feed Submit</span> </button>
+                                                            <span className="i_tag i_button"><button type="button" className="btn btn-light hashtag-Button"> <i className=" mdi mdi-link" aria-hidden="true"></i> <span>Submit Feed</span> </button>
                                                             </span>
                                                 </div>
                                             <div className="clearfix"></div>
