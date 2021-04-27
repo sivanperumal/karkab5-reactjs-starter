@@ -1,24 +1,47 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  } from "react-router-dom"
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+
+import Login from './components/Login';
+import Feed from './components/Feed';
+
+
 
 function App() {
+  const name = 'Comorins';
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+
+      <Header ourName = {name} />
+        <Switch>
+            <Route path="/" exact>
+                <Login />
+            </Route>
+            <Route path="/home">
+                <h2>Home page content</h2>
+            </Route>
+            <Route path="/Feed">
+                <Feed />
+            </Route>
+            <Route path="/about">
+                <h2>About page content</h2>
+            </Route>
+        </Switch>
+      <Footer />
+      </Router>
+      
     </div>
+
+    
   );
 }
 
